@@ -6,30 +6,18 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
     <div class="little-box">
-<h1><?php the_title(); ?></h1>
-    <div class="data-wrapper"><div class="data-decoration"></div><div class="data-content"><h4><?php the_time('F j, Y') ?></h4></div></div>
-		<?php
-		the_excerpt( sprintf(
-			wp_kses(
-
-				),
-			get_the_title()
-			) );
-
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">',
-			'after'  => '</div>',
-			) );
-			?>
-			<div class="text-center">
-				<a href="<?php the_permalink() ?>" class="blogpost-button"><?php echo __('Continua') ?></a>
-			</div>
-        
+        <h1><?php the_title(); ?></h1>
+        <h4>         
+            <?php the_time('F j, Y') ?>
+        </h4>
+        <?php the_excerpt( sprintf(wp_kses(),get_the_title()) ); ?>
+        <div>
+            <a href="<?php the_permalink() ?>"><?php echo __('Continua') ?></a>
+        </div>
     </div>
 </div>
 <?php endwhile; else: ?>
-<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+<p><?php _e('Nada'); ?></p>
 <?php endif; ?>
 </div>
 </div>
