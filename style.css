@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Oswald', sans-serif;
+}
+
+#salla_header{
+    background-color: rgb(40, 82, 56) !important;
+    border-radius: 0px;
+    color: white;
+}
+
+.little-box{
+    border: 1px solid black;   
+    margin-bottom: 10px;
+    padding: 15px;
+}
+.little-box h1{
+    text-align: center;
+}
+.little-box h4{
+    color: rgba(0,0,0,.2);
+    text-align: center;
+    background: white;
+    z-index: 2;
+    left: -50%;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.little-box .data-decoration{
+    border-bottom: 1px solid black;
+    height: 15px;
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    z-index: 0;
+}
+
+
+.little-box .data-content{
+    left: 50%;
+    position: absolute;
+}
+
+.little-box .data-wrapper{
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+
